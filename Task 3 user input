@@ -1,0 +1,18 @@
+# random password generator
+import random
+unified_code = "awertyuiosqpdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890!@#$%^&*()_+"
+
+pass_length1 = int(input("What should be the min length your password be: "))
+pass_length2 = int(input("What should be the max length your password be: "))
+
+def generatrandompaassword():
+    length = random.randint(pass_length1, pass_length2 )
+    password = ""
+    for index in range(length):
+        randomCharacter = random.choice(unified_code)
+        password = password + randomCharacter
+    return password
+
+passworder = generatrandompaassword()
+print(passworder)
+print("This is your new password")
